@@ -29,7 +29,7 @@ data is written.
 ```java
 // This file should already exist and be filled with data to encrypt
 File inputFile = new File("myimage.png");
-// This file should be created and initialized to recieve the encrypted data
+// This file should be created and initialized from scratch to recieve the encrypted data
 File outputFile = new File("encrypted");
 // After this call returns, all the data from inputFile will be encrypted and written to outputFile
 EncryptionUtils.encrypt(clientKey, inputFile, outputFile);
@@ -42,11 +42,10 @@ content file. The second file object should be a new empty
 file where the decrypted contents of the input file are 
 written.
 
-
 ```java
 // This file should already exist and be filled encrypted data
 File inputFile = new File("encrypted");
-// This file should be created and initialized to recieve the decrypted data
+// This file should be created and initialized from scratch to recieve the decrypted data
 File outputFile = new File("mydecryptedimage.png");
 // After this call returns, all the data from inputFile will be decrypted and written to outputFile
 EncryptionUtils.decrypt(clientKey, inputFile, outputFile);
