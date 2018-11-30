@@ -14,6 +14,12 @@ Use the client key for encrypting and decrypting the
 content file, and send the server key to the API the the
 "key" parameter.
 
+```java
+// using keys[] from the code snippet above
+String clientKey = keys[0];
+String serverKey = keys[1];
+```
+
 encrypt takes a key (the client key string) and two file
 objects. The first one is the input file that is read from
 (this should be your unencrypted content file) and the
